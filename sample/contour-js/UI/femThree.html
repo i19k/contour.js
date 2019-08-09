@@ -1,0 +1,71 @@
+
+<style>
+    body { margin: 0 auto; }
+
+    #vp {
+        width: 100vw;
+        height: 600px;
+    }
+
+    #contourLegend {
+        position: absolute;
+        right: 50px;
+        top: 10px;
+        width: 50px;
+        height: 500px;
+    }
+
+
+
+    .legendEntry {
+        width: 30px;
+        height: 20px;
+        float: right;
+        margin-top: -10px;
+    }
+
+    .legendEntry:hover {
+        cursor: pointer;
+    }
+
+    .colorBox {
+        width: 20px;
+        height: 100%;
+        float: left;
+    }
+
+    #pointValue {
+        position: fixed;
+        display: none;
+        border: 2px solid #ccc;
+        background-color: #ddd;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        padding: 2px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="build/three.js"></script>
+<script src="build/OrbitControls.js"></script>
+
+<script src="femDrawer.js"></script>
+<script src="contour.js"></script>
+
+
+
+
+
+
+
+<div id="vp">
+
+<div id="contourLegend">
+
+</div>
+
+<div id="pointValue">
+
+</div>
+
+</div>

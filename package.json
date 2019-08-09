@@ -1,0 +1,26 @@
+{
+  "name": "contour-js",
+  "version": "1.0.4",
+  "description": "Create mesh and color array to contour the FEM results.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mclittle/Contour.js.git"
+  },
+  "keywords": [
+    "contour.js",
+    "fem",
+    "contour",
+    "coloring",
+    "finite-element-method"
+  ],
+  "author": "Ismail Kucuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mclittle/Contour.js/issues"
+  },
+  "homepage": "https://github.com/mclittle/Contour.js#readme"
+}

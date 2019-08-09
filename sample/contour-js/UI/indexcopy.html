@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FEMViewer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    <script src="build/rivets.js"></script>
+
+    <style>
+        body { margin: 0 auto; }
+
+        #three {
+            position: relative;
+            width: 100vw;
+            height: 600px;
+            margin-left: -2px;
+            margin-right: -2px;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <script src="jquery-3.2.1.min.js"></script>
+    <label>
+        Open File Dialog
+        <input type="file" id="sfd" accept=".json" onchange="handleOnChange()">
+    </label>
+
+    <div id="three">
+
+    </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Results</h5>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="result0" name="result" class="custom-control-input" checked data-draw-result="">
+                      <label class="custom-control-label" for="result0">None</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="result1" name="result" class="custom-control-input" data-draw-result="u0">
+                      <label class="custom-control-label" for="result1">$u_0$</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="result2" name="result" class="custom-control-input" data-draw-result="u1">
+                      <label class="custom-control-label" for="result2">$u_1$</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="result3" name="result" class="custom-control-input" data-draw-result="sx">
+                      <label class="custom-control-label" for="result3">$\sigma_x$</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="result4" name="result" class="custom-control-input" data-draw-result="sy">
+                      <label class="custom-control-label" for="result4">$\sigma_y$</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="result5" name="result" class="custom-control-input" data-draw-result="txy">
+                      <label class="custom-control-label" for="result5">$\tau_{xy}$</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="result6" name="result" class="custom-control-input" data-draw-result="svm">
+                      <label class="custom-control-label" for="result6">$\sigma_{vm}$</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Shape Type</h5>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="shapeType1" name="shapeType" class="custom-control-input" data-shape-type="deformed">
+                      <label class="custom-control-label" for="shapeType1">Deformed Shape</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="shapeType2" name="shapeType" class="custom-control-input" checked  data-shape-type="undeformed">
+                      <label class="custom-control-label" for="shapeType2">Undeformed Shape</label>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Display</h5>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="display1" name="display" class="custom-control-input" checked data-display="elementName">
+                      <label class="custom-control-label" for="display1">Element Name</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="display2" name="display" class="custom-control-input" data-display="contourValue">
+                      <label class="custom-control-label" for="display2">Contour Value</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Draw Objects</h5>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" id="drawNodes" name="drawNodes" class="custom-control-input">
+                      <label class="custom-control-label" for="drawNodes">Nodes</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" id="drawElements" name="drawElements" checked class="custom-control-input">
+                      <label class="custom-control-label" for="drawElements">Elements</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script>
+
+
+
+        DrawContourArgs.prototype = Object();
+        DrawContourArgs.prototype.constructor = DrawContourArgs;
+        function DrawContourArgs() {
+            this.drawResult = "";
+            this.drawNodes = true;
+            this.drawElements = true;
+            this.shapeType = "undeformed";
+            this.display = "elementName";
+
+            this.update = function(other) {
+                if (other == null) return;
+
+                this.drawResult = other.drawResult != null ? other.drawResult : this.drawResult;
+                this.drawNodes = other.drawNodes != null ? other.drawNodes : this.drawNodes;
+                this.drawElements = other.drawElements != null ? other.drawElements : this.drawElements;
+                this.shapeType = other.shapeType != null ? other.shapeType : this.shapeType;
+                this.display = other.display != null ? other.display : this.display;
+            }
+        }
+
+
+        var model = null;
+        var args = new DrawContourArgs();
+
+
+        function handleOnChange() {
+            var selectedFile = document.getElementById("sfd").files[0];
+            var reader = new FileReader();
+            reader.readAsText(selectedFile, "UTF-8");
+            reader.onload = function (evt) {
+                model = JSON.parse(evt.target.result);
+
+                $.ajax({
+                type: "POST",
+                url: "femThree.html",
+                success: function(e){
+                    $( "#three").html(e);
+                    on_render(model);
+                    Render(model, args);
+                    myThree.zoomToFit();
+                }
+            });
+            }
+        }
+
+        $(document).ready(function() {
+            $('input:radio[name="result"]').change(function(){
+
+                args.update({
+                    "drawResult": $(this).data("drawResult")
+                });
+
+
+                $.ajax({
+                    type: "POST",
+                    url: "femThree.html",
+                    success: function(e){
+                        $( "#three").html(e);
+                        on_render(model);
+                        Render(model, args);
+                    }
+                });
+            });
+
+            $('input:radio[name="shapeType"]').change(function(){
+
+                args.update({
+                    "shapeType": $(this).data("shapeType")
+                });
+
+                $.ajax({
+                    type: "POST",
+                    url: "femThree.html",
+                    success: function(e){
+                        $( "#three").html(e);
+                        on_render(model);
+                        Render(model, args);
+                    }
+                });
+            });
+
+            $('input:radio[name="display"]').change(function(){
+
+                args.update({
+                    "display": $(this).data("display")
+                });
+
+                /*$.ajax({
+                    type: "POST",
+                    url: "femThree.html",
+                    success: function(e){
+                        //$( "#three").html(e);
+                        //on_render(model);
+                        //Render(model, args);
+                    }
+                });*/
+            });
+
+             $('input:checkbox[name="drawElements"]').change(function(){
+
+                args.update({
+                    "drawElements": $(this).is(":checked")
+                });
+
+                $.ajax({
+                    type: "POST",
+                    url: "femThree.html",
+                    success: function(e){
+                        $( "#three").html(e);
+                        on_render(model);
+                        Render(model, args);
+                    }
+                });
+             });
+
+        });
+    </script>
+</body>
+</html>

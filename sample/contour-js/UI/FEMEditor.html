@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script src="build/three.js"></script>
+    <script src="build/OrbitControls.js"></script>
+
+    <script>
+        var scene, camera, renderer, sphereInter;
+        var mouse, raycaster, isShiftDown = false;
+        var mouseloc = new THREE.Vector3();
+        var objects = []
+        var frustumSize = 5000;
+        init();
+        render();
+        function init() {
+            container = document.createElement( 'div' );
+            document.body.appendChild( container );
+            var info = document.createElement( 'div' );
+
+            raycaster = new THREE.Raycaster();
+            mouse = new THREE.Vector2();
+
+            var aspect = window.innerWidth / window.innerHeight;
+            camera = new THREE.OrthographicCamera( frustumSize * aspect / - 2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, 395, 405 );
+            camera.position.z = 400;
+            camera.lookAt(new THREE.Vector3(0, 0, -1));
+            var controls = new THREE.OrbitControls( camera );
+            controls.enableRotate = false;
+
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color( 0x000000 );
+
+            var geometry = new THREE.SphereGeometry( 5 );
+            var material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
+            sphereInter = new THREE.Mesh( geometry, material );
+            //sphereInter.visible = false;
+            scene.add( sphereInter );
+
+            var mat_ntos = new THREE.MeshBasicMaterial( {color: 0x00ff00, side: THREE.DoubleSide} );
+            var geo = new THREE.Geometry();
+            geo.vertices.push( new THREE.Vector3(0,0,0));
+            geo.vertices.push( new THREE.Vector3(100,0,0));
+            geo.vertices.push( new THREE.Vector3(100,100,0));
+            geo.vertices.push( new THREE.Vector3(0,100,0));
+
+            geo.faces.push( new THREE.Face3(0,1,2));
+            geo.faces.push( new THREE.Face3(0,2,3));
+            var plane = new THREE.Mesh(geo, mat_ntos);
+            scene.add( plane );
+
+            objects.push(plane);
+            var gridHelper = new THREE.GridHelper( 1000, 20, 0xf0f0f0);
+            gridHelper.rotateOnAxis(new THREE.Vector3(1,0,0), 3.1416 / 2);
+            scene.add( gridHelper );
+
+            renderer = new THREE.WebGLRenderer( { antialias: true } );
+            renderer.setPixelRatio( window.devicePixelRatio );
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            container.appendChild( renderer.domElement );
+
+            document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+            document.addEventListener( 'keydown', onDocumentKeyDown, false );
+            document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+        }
+        
+        function onDocumentMouseMove(event) {
+            event.preventDefault();
+            mouseloc.x = (event.clientX / window.innerWidth ) * 2 - 1;
+            mouseloc.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+            mouseloc.z = 0.5;
+
+            mouse.x = ( event.clientX / renderer.domElement.clientWidth ) * 2 - 1;
+            mouse.y = - ( event.clientY / renderer.domElement.clientHeight ) * 2 + 1;
+            mouse.z = 0;
+            //sphereInter.position = THREE.Vector2(mouse.x, mouse.y);
+
+            mouseloc.unproject( camera );
+            //mouseloc.z = 0;
+
+            sphereInter.position.copy( mouseloc );
+
+            raycaster.setFromCamera( mouse, camera );
+            render();
+        }
+
+        function onDocumentMouseDown(event) {
+            switch(event.which){
+                case 1:
+                    event.preventDefault();
+                    /*mouseloc.unproject( camera );
+                    var dir = mouseloc.sub( camera.position ).normalize();
+
+                    var distance = - camera.position.z / dir.z;
+
+                    var pos = camera.position.clone().add( dir.multiplyScalar( distance ) );*/
+
+                    var geometry = new THREE.SphereGeometry( 5 );
+                    var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+                    var temp = new THREE.Mesh( geometry, material );
+                    temp.position.copy( mouseloc );
+                    scene.add( temp );
+                    render();
+            }
+        }
+
+        function onDocumentKeyDown( event ) {
+            switch( event.keyCode ) {
+                case 38:
+                    mouseloc.unproject( camera );
+
+                    alert(mouseloc.x);
+                    alert(mouseloc.y);
+                    alert(mouseloc.z);
+
+                    var dir = mouseloc.sub( camera.position ).normalize();
+
+                    var distance = - camera.position.z / dir.z;
+
+                    var pos = camera.position.clone().add( dir.multiplyScalar( distance ) );
+
+                    alert(pos.x);
+                    alert(pos.y);
+                    alert(pos.z);
+
+                    break;
+            }
+        }
+
+        function render() {
+            renderer.render( scene, camera );
+        }
+    </script>
+</body>
+</html>

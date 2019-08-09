@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FEMViewer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    <script src="build/rivets.js"></script>
+    <script src="build/three.js"></script>
+    <script src="build/OrbitControls.js"></script>
+
+    <script src="build/app.js"></script>
+    <script src="contour.js"></script>
+
+    <style>
+        body { margin: 0 auto; }
+
+
+        #vp {
+            width: 100vw;
+            height: 100vh;
+			position: fixed;
+        }
+		
+		.header {
+			position: absolute;
+            top: 10px;
+            width: 100vw;
+            height: 200px;
+			z-index: 10;
+		}
+
+        #contourLegend {
+            position: absolute;
+            right: 50px;
+            top: 50px;
+            width: 50px;
+            height: 500px;
+			z-index: 20;
+        }
+
+        .legendEntry {
+            width: 30px;
+            height: 20px;
+            float: right;
+            margin-top: -14px;
+        }
+
+        .legendEntry:hover {
+            cursor: pointer;
+        }
+
+        .colorBox {
+            width: 20px;
+            height: 100%;
+            float: left;
+        }
+
+        #pointValue {
+            font-size: 25px;
+            position: fixed;
+            display: none;
+            border: 2px solid #ccc;
+            background-color: #ddd;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            padding: 2px;
+        }
+
+        .control-panel {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 500px;
+			z-index: 9999;
+        }
+		
+        .control-panel-content {
+            overflow: scroll;
+            height: 500px;
+		}
+    </style>
+</head>
+<body>
+<div class="header">
+	<script src="jquery-3.2.1.min.js"></script>
+	<label>
+		Open File Dialog
+		<input type="file" id="sfd" accept=".json" onchange="handleOnChange()">
+	</label>
+</div>
+	
+
+<div id="contourLegend">
+
+</div>
+	
+<div id="vp">
+
+	<div id="pointValue">
+
+	</div>
+
+</div>
+
+<div class="control-panel">
+	<div class="card">
+		<h3 class="card-title">Control Panel</h3>
+		<div class="card-body control-panel-content">
+	
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">Results</h5>
+				<div class="custom-control custom-radio">
+				  <input type="radio" id="result0" name="result" class="custom-control-input" checked data-draw-result="">
+				  <label class="custom-control-label" for="result0">None</label>
+				</div>
+				<div class="custom-control custom-radio">
+				  <input type="radio" id="result1" name="result" class="custom-control-input" data-draw-result="u0">
+				  <label class="custom-control-label" for="result1">$u_0$</label>
+				</div>
+				<div class="custom-control custom-radio">
+				  <input type="radio" id="result2" name="result" class="custom-control-input" data-draw-result="u1">
+				  <label class="custom-control-label" for="result2">$u_1$</label>
+				</div>
+				<div class="custom-control custom-radio">
+				  <input type="radio" id="result3" name="result" class="custom-control-input" data-draw-result="sx">
+				  <label class="custom-control-label" for="result3">$\sigma_x$</label>
+				</div>
+				<div class="custom-control custom-radio">
+				  <input type="radio" id="result4" name="result" class="custom-control-input" data-draw-result="sy">
+				  <label class="custom-control-label" for="result4">$\sigma_y$</label>
+				</div>
+				<div class="custom-control custom-radio">
+				  <input type="radio" id="result5" name="result" class="custom-control-input" data-draw-result="txy">
+				  <label class="custom-control-label" for="result5">$\tau_{xy}$</label>
+				</div>
+				<div class="custom-control custom-radio">
+				  <input type="radio" id="result6" name="result" class="custom-control-input" data-draw-result="svm">
+				  <label class="custom-control-label" for="result6">$\sigma_{vm}$</label>
+				</div>
+			</div>
+		</div>
+		
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">Shape Type</h5>
+				<div class="custom-control custom-radio">
+				  <input type="radio" id="shapeType1" name="shapeType" class="custom-control-input" data-shape-type="deformed">
+				  <label class="custom-control-label" for="shapeType1">Deformed Shape</label>
+				</div>
+				<div class="custom-control custom-radio">
+				  <input type="radio" id="shapeType2" name="shapeType" class="custom-control-input" checked  data-shape-type="undeformed">
+				  <label class="custom-control-label" for="shapeType2">Undeformed Shape</label>
+				</div>
+			</div>
+		</div>
+		
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">Display</h5>
+				<div class="custom-control custom-radio">
+				  <input type="radio" id="display1" name="display" class="custom-control-input" checked data-display="elementName">
+				  <label class="custom-control-label" for="display1">Element Name</label>
+				</div>
+				<div class="custom-control custom-radio">
+				  <input type="radio" id="display2" name="display" class="custom-control-input" data-display="contourValue">
+				  <label class="custom-control-label" for="display2">Contour Value</label>
+				</div>
+			</div>
+		</div>
+		
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">Draw Objects</h5>
+				<div class="custom-control custom-checkbox">
+				  <input type="checkbox" id="drawNodes" name="drawNodes" class="custom-control-input">
+				  <label class="custom-control-label" for="drawNodes">Nodes</label>
+				</div>
+				<div class="custom-control custom-checkbox">
+				  <input type="checkbox" id="drawEdges" name="drawEdges" checked class="custom-control-input">
+				  <label class="custom-control-label" for="drawEdges">Edges"</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">Parameters</h5>
+				<div class="form-group">
+					<label class="form-check-label" for="scaleFactor">Scale Factor</label>
+					<input type="text" class="form-control" id="scaleFactor" name="scaleFactor" placeholder="Scale Factor" value="1">
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-primary" id="refresh" name="refresh">Refresh</button>
+				</div>
+			</div>
+		</div>
+	
+		</div>
+	</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>

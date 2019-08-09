@@ -1,0 +1,75 @@
+<html>
+   <head>
+      <title>Mouse Tracking in Three.js</title>
+      <style>canvas { width: 100%; height: 100% }</style>
+      <script src="myjs/three.min.js"></script>
+	  <script type="text/javascript" src="myjs/controls/TrackballControls.js"></script>
+   </head>
+   <body>
+		
+		<script>
+		
+			var camera, controls, scene, renderer;
+			
+			init();
+			animate();
+			
+			function init(){
+			
+				camera = new THREE.PerspectiveCamera(45, window.innerWidth /window.innerHeight);
+				
+				camera.position.z = 500;
+				
+				controls = new THREE.TrackballControls(camera);
+				
+				controls.rotateSpeed = 5.0;
+				controls.zoomSpeed = 3.0;
+				controls.panSpeed = 1.0;
+				//controls.noZoom = false;
+				//controls.noPan = false;
+				//controls.staticMoving = true;
+				controls.dynamicDampingFactor = 1.0;
+				//controls.minDistance = radius * 1.1;
+				//controls.maxDistance = radius * 100;
+				//controls.keys = [65, 83, 68]; // [ rotateKey, zoomKey, panKey ]
+				
+				controls.addEventListener('change', render);
+				
+				scene = new THREE.Scene();
+				
+				var geometry = new THREE.CubeGeometry(100,100,100);
+				var material = new THREE.MeshNormalMaterial();
+				
+				var mesh = new THREE.Mesh(geometry, material);
+				
+				scene.add(mesh);
+				
+				renderer = new THREE.WebGLRenderer();
+				renderer.setSize(window.innerWidth, window.innerHeight)
+				
+				document.body.appendChild(renderer.domElement);
+				
+				render();
+			
+			}
+			
+			function animate(){
+			
+				requestAnimationFrame( animate);
+				controls.update();
+			
+			}
+			
+			function render(){
+			
+				renderer.render(scene, camera);
+			
+			}
+			
+			
+		</script>
+   
+      
+      
+   </body>
+</html>    

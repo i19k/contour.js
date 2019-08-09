@@ -1,0 +1,113 @@
+<html>
+   <head>
+      <title>Mouse Tracking in Three.js</title>
+      <style>canvas { width: 100%; height: 100% }</style>
+      <script src="myjs/three.min.js"></script>
+	  <script type="text/javascript" src="myjs/controls/TrackballControls.js"></script>
+   </head>
+   <body>
+		
+		<script>
+			
+			var camera, controls, scene, renderer;
+			
+			init();
+			animate();
+			
+			function getRandomColor() {
+				var letters = '0123456789ABCDEF'.split('');
+				var color = '#';
+				for (var i = 0; i < 6; i++ ) {
+					color += letters[Math.floor(Math.random() * 16)];
+				}
+				return color;
+			}
+			
+			function init(){
+			
+				camera = new THREE.PerspectiveCamera(45, window.innerWidth /window.innerHeight);
+				
+				camera.position.z = 400;
+				
+				controls = new THREE.TrackballControls(camera);
+				
+				controls.rotateSpeed = 5.0;
+				controls.zoomSpeed = 3.0;
+				controls.panSpeed = 1.0;
+				//controls.noZoom = false;
+				//controls.noPan = false;
+				//controls.staticMoving = true;
+				controls.dynamicDampingFactor = 1.0;
+				//controls.minDistance = radius * 1.1;
+				//controls.maxDistance = radius * 100;
+				//controls.keys = [65, 83, 68]; // [ rotateKey, zoomKey, panKey ]
+				
+				controls.addEventListener('change', render);
+				
+				scene = new THREE.Scene();
+				
+				var geometry = new THREE.CubeGeometry(100,100,100);
+				var material = new THREE.MeshNormalMaterial();
+				
+				var mesh = new THREE.Mesh(geometry, material);
+				
+				//scene.add(mesh);
+				
+				renderer = new THREE.WebGLRenderer();
+				renderer.setSize(window.innerWidth, window.innerHeight)
+				
+				document.body.appendChild(renderer.domElement);
+				
+				for (i = 0; i < 1; i++) { 
+				
+				var min = -100;
+				var max = 100;
+				// and the formula is:
+				var random1 = Math.floor(Math.random() * (max - min + 1)) + min;
+				var random2 = Math.floor(Math.random() * (max - min + 1)) + min;
+				var random3 = Math.floor(Math.random() * (max - min + 1)) + min;
+				
+				var geometry = new THREE.Geometry();
+
+				geometry.vertices.push(
+					new THREE.Vector3( -random1,  random2, random2 ),
+					new THREE.Vector3( -random2, -random1, random3 ),
+					new THREE.Vector3(  random1, -random3, random1 )
+				);
+
+				geometry.faces.push( new THREE.Face3( 0, 1, 2 ) );
+
+				geometry.computeBoundingSphere();
+							
+				var material = new THREE.MeshBasicMaterial( { color: getRandomColor(), side: THREE.DoubleSide} );
+				var triangle = new THREE.Mesh( geometry, material );
+				
+				
+				scene.add( triangle );
+				}
+				
+				
+				render();
+			
+			}
+			
+			function animate(){
+			
+				requestAnimationFrame( animate);
+				controls.update();
+			
+			}
+			
+			function render(){
+			
+				renderer.render(scene, camera);
+			
+			}
+			
+			
+		</script>
+   
+      
+      
+   </body>
+</html>    
