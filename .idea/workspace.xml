@@ -2,15 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14c0d2b2-178a-4b13-98fa-1b323f1384cd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Entities/ColorMap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Entities/ColorTriangle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Entities/Vertex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/FEM/Domain.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/FEM/Element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/FEM/Rectangle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/FEM/Triangle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Entities/Domain.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Entities/Element.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Entities/Rectangle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Entities/Triangle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Entities/eTriangleType.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/threejs/DrawContourArgs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/threejs/MyThree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/IO/Reader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Entities/ColorMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Entities/ColorMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Entities/ColorTriangle.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Entities/ColorTriangle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Entities/Vertex.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Entities/Vertex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/FEM/Domain.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/FEM/Element.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/FEM/Rectangle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/FEM/Triangle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/contour-js/UI/model1.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/model1.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,123 +34,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vertex.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Entities/Vertex.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="contour.js" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/contour-js/UI/contour.js">
+        <entry file="file://$PROJECT_DIR$/test/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="239" selection-start-line="239" selection-end-line="506" selection-end-column="1" />
-              <folding>
-                <element signature="e#50#88#0" />
-                <element signature="n#!!block;n#Vertex#0" />
-                <element signature="e#300#395#0" />
-                <element signature="n#!!block;n#ColorTriangle#0" />
-                <element signature="e#626#1018#0" />
-                <element signature="e#1060#1527#0" />
-                <element signature="e#1174#1484#0" />
-                <element signature="e#1306#1366#0" />
-                <element signature="n#!!block;n#ColorMap#0" />
-                <element signature="e#1756#2099#0" />
-                <element signature="e#2155#2218#0" />
-                <element signature="e#2272#3659#0" />
-                <element signature="e#2456#2810#0" />
-                <element signature="e#2637#2800#0" />
-                <element signature="e#2701#2786#0" />
-                <element signature="e#2824#2984#0" />
-                <element signature="e#2924#2974#0" />
-                <element signature="e#3145#3586#0" />
-                <element signature="e#3696#3921#0" />
-                <element signature="e#3749#3851#0" />
-                <element signature="e#3787#3841#0" />
-                <element signature="e#3961#4192#0" />
-                <element signature="e#4014#4119#0" />
-                <element signature="e#4052#4109#0" />
-                <element signature="e#4235#4348#0" />
-                <element signature="e#4393#4514#0" />
-                <element signature="n#!!block;n#Element#0" />
-                <element signature="n#!!block;n#Triangle#0" />
-                <element signature="e#4868#4898#0" />
-                <element signature="e#4929#5204#0" />
-                <element signature="n#!!block;n#Rectangle#0" />
-                <element signature="e#5401#5577#0" />
-                <element signature="e#5418#5570#0" />
-                <element signature="e#5617#6083#0" />
-                <element signature="e#5763#6006#0" />
-                <element signature="e#5831#5894#0" />
-                <element signature="e#5900#5996#0" />
-                <element signature="e#6128#6568#0" />
-                <element signature="e#6192#6541#0" />
-                <element signature="e#6264#6531#0" />
-                <element signature="e#6339#6420#0" />
-                <element signature="n#!!block;n#Domain#0" />
-                <element signature="e#6764#9569#0" />
-                <element signature="e#7077#7144#0" />
-                <element signature="e#7158#7232#0" />
-                <element signature="e#7342#8007#0" />
-                <element signature="e#7519#7619#0" />
-                <element signature="e#7723#7851#0" />
-                <element signature="e#8060#8592#0" />
-                <element signature="e#8183#8261#0" />
-                <element signature="e#8691#9339#0" />
-                <element signature="e#8766#8941#0" />
-                <element signature="e#8838#8927#0" />
-                <element signature="e#9612#12583#0" />
-                <element signature="e#9744#9781#0" />
-                <element signature="e#9819#12160#0" />
-                <element signature="e#9886#10040#0" />
-                <element signature="e#10110#10264#0" />
-                <element signature="e#10367#10628#0" />
-                <element signature="e#10646#10907#0" />
-                <element signature="e#11154#11466#0" />
-                <element signature="e#11607#11915#0" />
-                <element signature="e#12198#12577#0" />
-                <element signature="e#12629#16763#0" />
-                <element signature="e#12834#14220#0" />
-                <element signature="e#12900#13673#0" />
-                <element signature="e#13203#13544#0" />
-                <element signature="e#13691#14210#0" />
-                <element signature="e#13761#13949#0" />
-                <element signature="e#13790#13930#0" />
-                <element signature="e#14008#14196#0" />
-                <element signature="e#14037#14177#0" />
-                <element signature="e#14258#16733#0" />
-                <element signature="e#14808#15156#0" />
-                <element signature="e#15162#16723#0" />
-                <element signature="e#15229#15901#0" />
-                <element signature="e#15272#15564#0" />
-                <element signature="e#15591#15883#0" />
-                <element signature="e#15930#16602#0" />
-                <element signature="e#15973#16265#0" />
-                <element signature="e#16292#16584#0" />
-                <element signature="e#16818#17412#0" />
-                <element signature="e#17019#17138#0" />
-                <element signature="e#17281#17386#0" />
-                <element signature="e#17460#17762#0" />
-                <element signature="e#17798#17842#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Domain.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/FEM/Domain.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="96" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="util.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/util.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            <state>
+              <caret column="6" selection-start-column="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -153,13 +71,19 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getType</find>
+      <find>export default</find>
+      <find>import</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/vertex.js" />
         <option value="$PROJECT_DIR$/triangle.js" />
         <option value="$PROJECT_DIR$/color_triangle.js" />
@@ -167,12 +91,32 @@
         <option value="$PROJECT_DIR$/Triangle.js" />
         <option value="$PROJECT_DIR$/ColorTriangle.js" />
         <option value="$PROJECT_DIR$/Element.js" />
-        <option value="$PROJECT_DIR$/lib/Entities/ColorMap.js" />
-        <option value="$PROJECT_DIR$/lib/Entities/Rectangle.js" />
-        <option value="$PROJECT_DIR$/lib/Entities/Domain.js" />
         <option value="$USER_HOME$/Desktop/contour-js/UI/contour.js" />
+        <option value="$PROJECT_DIR$/lib/FEM/Element.js" />
+        <option value="$PROJECT_DIR$/lib/FEM/Rectangle.js" />
+        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/lib/util.js" />
+        <option value="$PROJECT_DIR$/lib/IO/Reader.js" />
+        <option value="$PROJECT_DIR$/sample/contour-js/UI/build/app.js" />
+        <option value="$PROJECT_DIR$/lib/FEM/Triangle.js" />
+        <option value="$PROJECT_DIR$/lib/FEM/eTriangleType.js" />
         <option value="$PROJECT_DIR$/lib/FEM/Domain.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/lib/Entities/eTriangleType.js" />
+        <option value="$PROJECT_DIR$/lib/threejs/ContourArgs.js" />
+        <option value="$PROJECT_DIR$/lib/threejs/index.js" />
+        <option value="$PROJECT_DIR$/lib/Entities/Domain.js" />
+        <option value="$PROJECT_DIR$/lib/Entities/ColorTriangle.js" />
+        <option value="$PROJECT_DIR$/lib/Entities/ColorMap.js" />
+        <option value="$PROJECT_DIR$/lib/Entities/Element.js" />
+        <option value="$PROJECT_DIR$/lib/Entities/Rectangle.js" />
+        <option value="$PROJECT_DIR$/lib/Entities/Triangle.js" />
+        <option value="$PROJECT_DIR$/lib/Entities/Vertex.js" />
+        <option value="$PROJECT_DIR$/lib/threejs/DrawContourArgs.js" />
+        <option value="$PROJECT_DIR$/lib/threejs/MyThree.js" />
+        <option value="$PROJECT_DIR$/sample/contour-js/UI/contour.js" />
+        <option value="$PROJECT_DIR$/test/index.js" />
+        <option value="$PROJECT_DIR$/lib/index.js" />
       </list>
     </option>
   </component>
@@ -183,6 +127,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
@@ -221,8 +168,7 @@
             <path>
               <item name="Contour.js" type="b2602c69:ProjectViewProjectNode" />
               <item name="Contour.js" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="FEM" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -233,17 +179,20 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.16.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Belgeler\YAZILIM\github\mclittle\Contour.js\lib\FEM" />
+      <recent name="D:\Belgeler\YAZILIM\github\mclittle\Contour.js\test" />
+      <recent name="D:\Belgeler\YAZILIM\github\mclittle\Contour.js\lib\Entities" />
       <recent name="D:\Belgeler\YAZILIM\github\mclittle\Contour.js\lib" />
+      <recent name="D:\Belgeler\YAZILIM\github\mclittle\Contour.js\lib\FEM" />
       <recent name="D:\Belgeler\YAZILIM\github\mclittle\Contour.js" />
-      <recent name="D:\Belgeler\YAZILIM\github\mclittle\Contour.js\Entities" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -269,31 +218,33 @@
       <option name="presentableId" value="Default" />
       <updated>1565363694516</updated>
       <workItem from="1565363695708" duration="1592000" />
+      <workItem from="1565847957050" duration="6762000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1592000" />
+    <option name="totallyTimeSpent" value="8354000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info id="npm" side_tool="true" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="right" id="JSON Viewer" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32943678" />
+      <window_info anchor="right" id="JSON Viewer" order="3" />
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -305,42 +256,162 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$USER_HOME$/Desktop/contour-js/UI/contour.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        <state relative-caret-position="4063">
+          <caret line="239" selection-start-line="239" selection-end-line="506" selection-end-column="1" />
+          <folding>
+            <element signature="e#50#88#0" />
+            <element signature="n#!!block;n#Vertex#0" />
+            <element signature="e#300#395#0" />
+            <element signature="n#!!block;n#ColorTriangle#0" />
+            <element signature="e#626#1018#0" />
+            <element signature="e#1060#1527#0" />
+            <element signature="e#1174#1484#0" />
+            <element signature="e#1306#1366#0" />
+            <element signature="n#!!block;n#ColorMap#0" />
+            <element signature="e#1756#2099#0" />
+            <element signature="e#2155#2218#0" />
+            <element signature="e#2272#3659#0" />
+            <element signature="e#2456#2810#0" />
+            <element signature="e#2637#2800#0" />
+            <element signature="e#2701#2786#0" />
+            <element signature="e#2824#2984#0" />
+            <element signature="e#2924#2974#0" />
+            <element signature="e#3145#3586#0" />
+            <element signature="e#3696#3921#0" />
+            <element signature="e#3749#3851#0" />
+            <element signature="e#3787#3841#0" />
+            <element signature="e#3961#4192#0" />
+            <element signature="e#4014#4119#0" />
+            <element signature="e#4052#4109#0" />
+            <element signature="e#4235#4348#0" />
+            <element signature="e#4393#4514#0" />
+            <element signature="n#!!block;n#Element#0" />
+            <element signature="n#!!block;n#Triangle#0" />
+            <element signature="e#4868#4898#0" />
+            <element signature="e#4929#5204#0" />
+            <element signature="n#!!block;n#Rectangle#0" />
+            <element signature="e#5401#5577#0" />
+            <element signature="e#5418#5570#0" />
+            <element signature="e#5617#6083#0" />
+            <element signature="e#5763#6006#0" />
+            <element signature="e#5831#5894#0" />
+            <element signature="e#5900#5996#0" />
+            <element signature="e#6128#6568#0" />
+            <element signature="e#6192#6541#0" />
+            <element signature="e#6264#6531#0" />
+            <element signature="e#6339#6420#0" />
+            <element signature="n#!!block;n#Domain#0" />
+            <element signature="e#6764#9569#0" />
+            <element signature="e#7077#7144#0" />
+            <element signature="e#7158#7232#0" />
+            <element signature="e#7342#8007#0" />
+            <element signature="e#7519#7619#0" />
+            <element signature="e#7723#7851#0" />
+            <element signature="e#8060#8592#0" />
+            <element signature="e#8183#8261#0" />
+            <element signature="e#8691#9339#0" />
+            <element signature="e#8766#8941#0" />
+            <element signature="e#8838#8927#0" />
+            <element signature="e#9612#12583#0" />
+            <element signature="e#9744#9781#0" />
+            <element signature="e#9819#12160#0" />
+            <element signature="e#9886#10040#0" />
+            <element signature="e#10110#10264#0" />
+            <element signature="e#10367#10628#0" />
+            <element signature="e#10646#10907#0" />
+            <element signature="e#11154#11466#0" />
+            <element signature="e#11607#11915#0" />
+            <element signature="e#12198#12577#0" />
+            <element signature="e#12629#16763#0" />
+            <element signature="e#12834#14220#0" />
+            <element signature="e#12900#13673#0" />
+            <element signature="e#13203#13544#0" />
+            <element signature="e#13691#14210#0" />
+            <element signature="e#13761#13949#0" />
+            <element signature="e#13790#13930#0" />
+            <element signature="e#14008#14196#0" />
+            <element signature="e#14037#14177#0" />
+            <element signature="e#14258#16733#0" />
+            <element signature="e#14808#15156#0" />
+            <element signature="e#15162#16723#0" />
+            <element signature="e#15229#15901#0" />
+            <element signature="e#15272#15564#0" />
+            <element signature="e#15591#15883#0" />
+            <element signature="e#15930#16602#0" />
+            <element signature="e#15973#16265#0" />
+            <element signature="e#16292#16584#0" />
+            <element signature="e#16818#17412#0" />
+            <element signature="e#17019#17138#0" />
+            <element signature="e#17281#17386#0" />
+            <element signature="e#17460#17762#0" />
+            <element signature="e#17798#17842#0" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/color_triangle.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Entities/Vertex.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/FEM/Triangle.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Entities/ColorTriangle.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/FEM/Element.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Entities/ColorMap.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/FEM/Rectangle.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/util.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Entities/Domain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="96" selection-end-column="9" />
+          <folding>
+            <element signature="e#137#2583#0" />
+            <element signature="e#442#501#0" />
+            <element signature="e#507#573#0" />
+            <element signature="e#680#1304#0" />
+            <element signature="e#849#941#0" />
+            <element signature="e#1041#1161#0" />
+            <element signature="e#1353#1849#0" />
+            <element signature="e#1464#1534#0" />
+            <element signature="e#1939#2531#0" />
+            <element signature="e#2010#2169#0" />
+            <element signature="e#2078#2159#0" />
+            <element signature="e#2626#5396#0" />
+            <element signature="e#2751#2780#0" />
+            <element signature="e#2812#5003#0" />
+            <element signature="e#2901#3039#0" />
+            <element signature="e#3105#3243#0" />
+            <element signature="e#3338#3583#0" />
+            <element signature="e#3597#3842#0" />
+            <element signature="e#4069#4361#0" />
+            <element signature="e#4490#4778#0" />
+            <element signature="e#5038#5393#0" />
+            <element signature="e#5441#9388#0" />
+            <element signature="e#5625#6909#0" />
+            <element signature="e#5689#6406#0" />
+            <element signature="e#5972#6289#0" />
+            <element signature="e#6420#6903#0" />
+            <element signature="e#6488#6660#0" />
+            <element signature="e#6513#6645#0" />
+            <element signature="e#6721#6893#0" />
+            <element signature="e#6746#6878#0" />
+            <element signature="e#6944#9366#0" />
+            <element signature="e#7469#7793#0" />
+            <element signature="e#7799#9360#0" />
+            <element signature="e#7957#8591#0" />
+            <element signature="e#7997#8273#0" />
+            <element signature="e#8301#8577#0" />
+            <element signature="e#8621#9255#0" />
+            <element signature="e#8661#8937#0" />
+            <element signature="e#8965#9241#0" />
+            <element signature="e#9443#9935#0" />
+            <element signature="e#9616#9703#0" />
+            <element signature="e#9820#9917#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -439,10 +510,424 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/FEM/Domain.js">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="96" selection-end-column="9" />
+        <state relative-caret-position="-1">
+          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/contour-js/UI/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-859">
+          <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/contour-js/threejs/mouse-tracking/models/cube_1.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/model1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/IO/Reader.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/three/src/objects/Line.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/contour-js/UI/build/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="271" selection-start-line="271" selection-end-line="385" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!block;n#MyThree#0" />
+            <element signature="e#343#1123#0" />
+            <element signature="e#535#927#0" />
+            <element signature="e#585#917#0" />
+            <element signature="e#650#901#0" />
+            <element signature="n#!!block;n#InitViewport#0" />
+            <element signature="e#1259#1360#0" />
+            <element signature="e#1300#1354#0" />
+            <element signature="e#1801#1840#0" />
+            <element signature="n#!!block;n#animate#0" />
+            <element signature="n#!!block;n#DrawEdges#0" />
+            <element signature="e#2576#3621#0" />
+            <element signature="e#2708#3504#0" />
+            <element signature="e#2946#3095#0" />
+            <element signature="e#3274#3423#0" />
+            <element signature="n#!!block;n#DrawElements#0" />
+            <element signature="e#3942#4961#0" />
+            <element signature="e#4081#4629#0" />
+            <element signature="e#4175#4467#0" />
+            <element signature="e#4509#4619#0" />
+            <element signature="e#4743#4954#0" />
+            <element signature="n#!!block;n#DrawNodes#0" />
+            <element signature="e#5271#5472#0" />
+            <element signature="n#!!block;n#onMouseMove#0" />
+            <element signature="e#6078#7698#0" />
+            <element signature="e#6129#7695#0" />
+            <element signature="e#6210#7688#0" />
+            <element signature="e#6271#6739#0" />
+            <element signature="e#6396#6674#0" />
+            <element signature="e#6789#7673#0" />
+            <element signature="e#6860#7577#0" />
+            <element signature="e#7181#7473#0" />
+            <element signature="e#7583#7655#0" />
+            <element signature="e#7704#7738#0" />
+            <element signature="n#!!block;n#setContrast#0" />
+            <element signature="n#!!block;n#Render#0" />
+            <element signature="e#8195#8677#0" />
+            <element signature="e#8258#8305#0" />
+            <element signature="e#8332#8607#0" />
+            <element signature="e#8398#8536#0" />
+            <element signature="e#8466#8520#0" />
+            <element signature="e#8542#8597#0" />
+            <element signature="e#8633#8671#0" />
+            <element signature="e#8741#8894#0" />
+            <element signature="e#8798#8886#0" />
+            <element signature="e#8927#9080#0" />
+            <element signature="e#8984#9072#0" />
+            <element signature="e#9217#9678#0" />
+            <element signature="e#9359#9654#0" />
+            <element signature="e#9790#11849#0" />
+            <element signature="e#9907#10876#0" />
+            <element signature="e#10118#10261#0" />
+            <element signature="e#10304#10356#0" />
+            <element signature="e#10391#10443#0" />
+            <element signature="e#10478#10525#0" />
+            <element signature="e#10560#10607#0" />
+            <element signature="e#10643#10689#0" />
+            <element signature="e#10725#10773#0" />
+            <element signature="e#10936#11839#0" />
+            <element signature="e#11027#11366#0" />
+            <element signature="e#11411#11827#0" />
+            <element signature="e#11998#12904#0" />
+            <element signature="e#12237#12551#0" />
+            <element signature="e#12678#12717#0" />
+            <element signature="n#!!block;n#DrawContourArgs#0" />
+            <element signature="e#13245#13802#0" />
+            <element signature="n#!!block;n#handleOnChange#0" />
+            <element signature="e#14035#14156#0" />
+            <element signature="e#14190#15392#0" />
+            <element signature="e#14267#14408#0" />
+            <element signature="e#14298#14362#0" />
+            <element signature="e#14468#14607#0" />
+            <element signature="e#14499#14561#0" />
+            <element signature="e#14665#14800#0" />
+            <element signature="e#14696#14754#0" />
+            <element signature="e#14864#15001#0" />
+            <element signature="e#14895#14954#0" />
+            <element signature="e#15065#15182#0" />
+            <element signature="e#15092#15136#0" />
+            <element signature="e#15235#15387#0" />
+            <element signature="e#15265#15340#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Entities/ColorTriangle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#1211#1219#0" />
+            <element signature="e#1274#1282#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Entities/ColorMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#76#84#0" />
+            <element signature="e#221#564#0" />
+            <element signature="e#590#653#0" />
+            <element signature="e#707#2094#0" />
+            <element signature="e#891#1245#0" />
+            <element signature="e#1072#1235#0" />
+            <element signature="e#1136#1221#0" />
+            <element signature="e#1259#1419#0" />
+            <element signature="e#1359#1409#0" />
+            <element signature="e#1580#2021#0" />
+            <element signature="e#2131#2356#0" />
+            <element signature="e#2184#2286#0" />
+            <element signature="e#2222#2276#0" />
+            <element signature="e#2396#2627#0" />
+            <element signature="e#2449#2554#0" />
+            <element signature="e#2487#2544#0" />
+            <element signature="e#2670#2783#0" />
+            <element signature="e#2828#2949#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Entities/eTriangleType.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Entities/Rectangle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="47" column="2" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
+          <folding>
+            <element signature="e#176#184#0" />
+            <element signature="e#277#449#0" />
+            <element signature="e#294#442#0" />
+            <element signature="e#490#956#0" />
+            <element signature="e#636#879#0" />
+            <element signature="e#704#767#0" />
+            <element signature="e#773#869#0" />
+            <element signature="e#1002#1442#0" />
+            <element signature="e#1066#1415#0" />
+            <element signature="e#1138#1405#0" />
+            <element signature="e#1213#1294#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Entities/Triangle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#180#188#0" />
+            <element signature="e#253#283#0" />
+            <element signature="e#315#659#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Entities/Domain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="28" />
+          <folding>
+            <element signature="e#204#277#0" />
+            <element signature="e#323#2769#0" />
+            <element signature="e#628#687#0" />
+            <element signature="e#693#759#0" />
+            <element signature="e#866#1490#0" />
+            <element signature="e#1035#1127#0" />
+            <element signature="e#1227#1347#0" />
+            <element signature="e#1539#2035#0" />
+            <element signature="e#1650#1720#0" />
+            <element signature="e#2125#2717#0" />
+            <element signature="e#2196#2355#0" />
+            <element signature="e#2264#2345#0" />
+            <element signature="e#2822#5897#0" />
+            <element signature="e#2956#5894#0" />
+            <element signature="e#3531#3685#0" />
+            <element signature="e#3755#3909#0" />
+            <element signature="e#4012#4273#0" />
+            <element signature="e#4291#4552#0" />
+            <element signature="e#4799#5111#0" />
+            <element signature="e#5256#5564#0" />
+            <element signature="e#5952#9899#0" />
+            <element signature="e#6136#7420#0" />
+            <element signature="e#6200#6917#0" />
+            <element signature="e#6483#6800#0" />
+            <element signature="e#6931#7414#0" />
+            <element signature="e#6999#7171#0" />
+            <element signature="e#7024#7156#0" />
+            <element signature="e#7232#7404#0" />
+            <element signature="e#7257#7389#0" />
+            <element signature="e#7455#9877#0" />
+            <element signature="e#7980#8304#0" />
+            <element signature="e#8310#9871#0" />
+            <element signature="e#8468#9102#0" />
+            <element signature="e#8508#8784#0" />
+            <element signature="e#8812#9088#0" />
+            <element signature="e#9132#9766#0" />
+            <element signature="e#9172#9448#0" />
+            <element signature="e#9476#9752#0" />
+            <element signature="e#9964#10456#0" />
+            <element signature="e#10137#10224#0" />
+            <element signature="e#10341#10438#0" />
+            <element signature="e#10500#13100#0" />
+            <element signature="e#10804#10863#0" />
+            <element signature="e#10873#10939#0" />
+            <element signature="e#11045#11670#0" />
+            <element signature="e#11214#11306#0" />
+            <element signature="e#11406#11526#0" />
+            <element signature="e#11719#12207#0" />
+            <element signature="e#11830#11900#0" />
+            <element signature="e#12298#12890#0" />
+            <element signature="e#12369#12528#0" />
+            <element signature="e#12437#12518#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/threejs/DrawContourArgs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="e#93#101#0" />
+            <element signature="e#263#788#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/threejs/MyThree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="79" column="15" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="4567" column="12" selection-start-line="4567" selection-start-column="12" selection-end-line="4567" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Entities/Element.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/contour-js/UI/contour.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding>
+            <element signature="e#50#88#0" />
+            <element signature="e#300#395#0" />
+            <element signature="n#!!block;n#ColorTriangle#0" />
+            <element signature="e#626#1018#0" />
+            <element signature="e#1060#1527#0" />
+            <element signature="e#1174#1484#0" />
+            <element signature="e#1306#1366#0" />
+            <element signature="n#!!block;n#ColorMap#0" />
+            <element signature="e#1756#2099#0" />
+            <element signature="e#2155#2218#0" />
+            <element signature="e#2272#3659#0" />
+            <element signature="e#2456#2810#0" />
+            <element signature="e#2637#2800#0" />
+            <element signature="e#2701#2786#0" />
+            <element signature="e#2824#2984#0" />
+            <element signature="e#2924#2974#0" />
+            <element signature="e#3145#3586#0" />
+            <element signature="e#3696#3921#0" />
+            <element signature="e#3749#3851#0" />
+            <element signature="e#3787#3841#0" />
+            <element signature="e#3961#4192#0" />
+            <element signature="e#4014#4119#0" />
+            <element signature="e#4052#4109#0" />
+            <element signature="e#4235#4348#0" />
+            <element signature="e#4393#4514#0" />
+            <element signature="n#!!block;n#Element#0" />
+            <element signature="n#!!block;n#Triangle#0" />
+            <element signature="e#4868#4898#0" />
+            <element signature="e#4929#5204#0" />
+            <element signature="n#!!block;n#Rectangle#0" />
+            <element signature="e#5401#5577#0" />
+            <element signature="e#5418#5570#0" />
+            <element signature="e#5617#6083#0" />
+            <element signature="e#5763#6006#0" />
+            <element signature="e#5831#5894#0" />
+            <element signature="e#5900#5996#0" />
+            <element signature="e#6128#6568#0" />
+            <element signature="e#6192#6541#0" />
+            <element signature="e#6264#6531#0" />
+            <element signature="e#6339#6420#0" />
+            <element signature="e#6764#9569#0" />
+            <element signature="e#7077#7144#0" />
+            <element signature="e#7158#7232#0" />
+            <element signature="e#7342#8007#0" />
+            <element signature="e#7519#7619#0" />
+            <element signature="e#7723#7851#0" />
+            <element signature="e#8060#8592#0" />
+            <element signature="e#8183#8261#0" />
+            <element signature="e#8691#9339#0" />
+            <element signature="e#8766#8941#0" />
+            <element signature="e#8838#8927#0" />
+            <element signature="e#9744#9781#0" />
+            <element signature="e#9819#12160#0" />
+            <element signature="e#9886#10040#0" />
+            <element signature="e#10110#10264#0" />
+            <element signature="e#10367#10628#0" />
+            <element signature="e#10646#10907#0" />
+            <element signature="e#11154#11466#0" />
+            <element signature="e#11607#11915#0" />
+            <element signature="e#12198#12577#0" />
+            <element signature="e#12629#16763#0" />
+            <element signature="e#12834#14220#0" />
+            <element signature="e#12900#13673#0" />
+            <element signature="e#13203#13544#0" />
+            <element signature="e#13691#14210#0" />
+            <element signature="e#13761#13949#0" />
+            <element signature="e#13790#13930#0" />
+            <element signature="e#14008#14196#0" />
+            <element signature="e#14037#14177#0" />
+            <element signature="e#14258#16733#0" />
+            <element signature="e#14808#15156#0" />
+            <element signature="e#15162#16723#0" />
+            <element signature="e#15229#15901#0" />
+            <element signature="e#15272#15564#0" />
+            <element signature="e#15591#15883#0" />
+            <element signature="e#15930#16602#0" />
+            <element signature="e#15973#16265#0" />
+            <element signature="e#16292#16584#0" />
+            <element signature="e#16818#17412#0" />
+            <element signature="e#17019#17138#0" />
+            <element signature="e#17281#17386#0" />
+            <element signature="e#17460#17762#0" />
+            <element signature="e#17798#17842#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Entities/Vertex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
         </state>
       </provider>
     </entry>
