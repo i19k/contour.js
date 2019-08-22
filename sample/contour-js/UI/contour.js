@@ -504,6 +504,13 @@ function Domain() {
         return ret;
     }
 
+    this.addElement = function (elm) {
+        this.elements.splice(this.elements.length - 1, 0, elm);
+    };
+
+    this.addElements = function (elms) {
+        this.elements.splice(this.elements.length - 1, 0, elms);
+    };
 }
 
 

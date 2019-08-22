@@ -2,9 +2,11 @@
   "name": "contour-js",
   "version": "1.0.4",
   "description": "Create mesh and color array to contour the FEM results.",
-  "main": "test/index.js",
+  "private": true,
+  "mode": "development",
   "scripts": {
-    "test": "node --experimental-modules test/index.js"
+    "prod": "http-server ./dist",
+    "dev": "node ./test/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,12 @@
   },
   "homepage": "https://github.com/mclittle/Contour.js#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
     "three": "^0.107.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
   }
 }

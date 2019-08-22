@@ -1,14 +1,13 @@
-const Contour = require('../lib');
-const fs = require('fs');
+const express = require('express');
+const app = express();
+const path = require('path');
+const port = 3000;
+const router = express.Router();
 
-let path = 'D:\\Belgeler\\YAZILIM\\github\\mclittle\\Contour.js\\test\\model1.json';
-
-fs.readFile(path, (err, data) => {
-    if (err) throw err;
-    let content = JSON.parse(data);
-
-    let contour = new Contour('#vp');
-
-    Render(model, myThree.args);
-    myThree.zoomToFit();
+router.get('/',function(req,res){
+    return res.sendFile(path.join(__dirname+'/../dist/index.html'));
 });
+
+app.use('/', router);
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
