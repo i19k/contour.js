@@ -329,6 +329,7 @@ function DrawContour(model, args) {
 
         Object.keys(mesh.elements).forEach(function(key){
             var element = mesh.elements[key];
+            element.name = key;
             if (element.nodes.length == 3) {
                 contourElement = new Triangle(vertices[element.nodes[0]],
                                                 vertices[element.nodes[1]],

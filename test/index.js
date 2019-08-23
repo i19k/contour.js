@@ -5,7 +5,7 @@ const port = 3000;
 const router = express.Router();
 
 router.get('/',function(req,res){
-    return res.sendFile(path.join(__dirname+'/../dist/index.html'));
+    return res.sendFile(path.join(__dirname+'/../src/index.html'));
 });
 
 app.use('/', router);

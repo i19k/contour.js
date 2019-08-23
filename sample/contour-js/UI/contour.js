@@ -261,6 +261,7 @@ function Domain() {
         triangles = [];
         for (var i = 0; i < this.elements.length; i++) {
             elm = this.elements[i];
+
             var rects = this.getSubRectangles(elm);
 
             elementTriangles = [];
@@ -276,6 +277,10 @@ function Domain() {
 
 
             triangles = triangles.concat(elementColorTriangles);
+            if (elm.name === "mesh2;14;2") {
+                console.log(elm);
+                console.log(elementColorTriangles);
+            }
 
         }
 
@@ -457,25 +462,15 @@ function Domain() {
                 ret = []
 
                 if (minGr.length == 2) {
-                    if (minGr == prevGr) {
-                        vertex = findCoordinate(minGr[0], maxGr[0], midGr[0].val);
-                        tri1 = new Triangle(vertex, midGr[0], maxGr[0]);
-                        rectangles = this.getSubRectangles(new Rectangle(minGr[1], midGr[0], vertex, minGr[0]));
-                    } else if (minGr == nextGr) {
-                        vertex = findCoordinate(minGr[1], maxGr[0], midGr[0].val);
-                        tri1 = new Triangle(vertex, maxGr[0], midGr[0]);
-                        rectangles = this.getSubRectangles(new Rectangle(minGr[1], vertex, midGr[0], minGr[0]));
-                    }
+
+                    vertex = findCoordinate(minGr[0], maxGr[0], midGr[0].val);
+                    tri1 = new Triangle(vertex, midGr[0], maxGr[0]);
+                    rectangles = this.getSubRectangles(new Rectangle(minGr[1], midGr[0], vertex, minGr[0]));
                 } else if (maxGr.length == 2) {
-                    if (maxGr == prevGr) {
-                        vertex = findCoordinate(minGr[0], maxGr[0], midGr[0].val);
-                        tri1 = new Triangle(vertex, midGr[0], minGr[0]);
-                        rectangles = this.getSubRectangles(new Rectangle(maxGr[1], midGr[0], vertex, maxGr[0]));
-                    } else if (maxGr == nextGr) {
-                        vertex = findCoordinate(minGr[0], maxGr[1], midGr[0].val);
-                        tri1 = new Triangle(vertex, minGr[0], midGr[0]);
-                        rectangles = this.getSubRectangles(new Rectangle(maxGr[1], vertex, midGr[0], maxGr[0]));
-                    }
+
+                    vertex = findCoordinate(minGr[0], maxGr[1], midGr[0].val);
+                    tri1 = new Triangle(vertex, minGr[0], midGr[0]);
+                    rectangles = this.getSubRectangles(new Rectangle(maxGr[1], vertex, midGr[0], maxGr[0]));
                 }
 
                 ret.push(tri1);
