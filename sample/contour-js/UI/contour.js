@@ -215,6 +215,7 @@ function Rectangle(v1, v2, v3, v4) {
         }
 
         ret.push(lastRet);
+        console.log(ret);
 
         return this.normalizeGroups(ret);
     }
@@ -277,10 +278,6 @@ function Domain() {
 
 
             triangles = triangles.concat(elementColorTriangles);
-            if (elm.name === "mesh2;14;2") {
-                console.log(elm);
-                console.log(elementColorTriangles);
-            }
 
         }
 
@@ -407,6 +404,7 @@ function Domain() {
 
         var groups = rect.getVertexGroups();
 
+
         if (groups.length == 1)
             return [rect]
 
@@ -443,6 +441,7 @@ function Domain() {
             }
         }
         else if (groups.length == 3) {
+            console.log(groups);
             var maxGr = groups.slice().sort((a, b) =>  parseFloat(b[0].val) - parseFloat(a[0].val))[0];
             var minGr = groups.slice().sort((a, b) => parseFloat(a[0].val) - parseFloat(b[0].val))[0];
             var midGr = groups.filter(gr => maxGr != gr && minGr != gr)[0];
